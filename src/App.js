@@ -1,18 +1,25 @@
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+import Home from "./pages/Home";
+import SubmitStory from "./pages/SubmitStory";
+import Stories from "./pages/Stories";
 
 function App() {
   return (
-    <div className="App">
-      <h1>InspireHer</h1>
-      <h2>Women Achievement Platform</h2>
+    <Router>
+      <Routes>
 
-      <p>
-        A platform to share and explore inspiring stories of women from around the world.
-      </p>
+        {/* Home Page */}
+        <Route path="/" element={<Home />} />
 
-      <button>View Stories</button>
-      <button>Share Your Story</button>
-    </div>
+        {/* Submit Story Page */}
+        <Route path="/submit" element={<SubmitStory />} />
+
+        {/* Stories Page */}
+        <Route path="/stories" element={<Stories />} />
+
+      </Routes>
+    </Router>
   );
 }
 
