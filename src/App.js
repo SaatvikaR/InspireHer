@@ -21,13 +21,13 @@ useEffect(() => {
     );
   }
 
-  if (page === "stories") {
-    return (
-      <div className="container">
-        <Stories stories={stories} setPage={setPage} />
-      </div>
-    );
-  }
+ if (page === "stories") {
+  return (
+    <div className="container">
+      <Stories stories={stories} setStories={setStories} setPage={setPage} />
+    </div>
+  );
+}
 
   if (page === "submit") {
     return (
